@@ -1,0 +1,77 @@
+<%- include("header") %>
+
+<body style="place-items: center;">
+
+    <div class="homeHeader">
+    <hr>
+        <h2>Taylor Leads</h2>
+        <p>Moving & Packing</p>
+    <p> Call or Text 469-592-8183</p>
+    <p>Dallas. Austin. Houston. San Antonio. Lubbock. Tyler. </p>
+    <img src="moving.png" class="responsive"><br>
+    <a href="#book">Book Online</a>
+    <hr>
+</div>
+    <div class="container right-panel-active">
+        <div class="container__form container--signup">
+            <form action="/" class="form" id="form1" method="post">
+                <h2 class="form__title">Sign Up</h2>
+                <input id="fname" name="fname" type="name" placeholder="First Name" class="input" />
+                <input id="lname" name="lname" type="name" placeholder="Last Name" class="input" />
+                <input id="uemail" name="uemail" type="email" placeholder="Email" class="input" />
+                <input id="upword" name="upword" type="password" placeholder="Password" class="input" />
+                <select name="user" id="user" two>
+         <option id="worker" value="worker">Worker</option>
+         <option value="client">Client</option>
+        </select>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+    
+        <div class="container__form container--signin">
+            <form action="#" class="form" id="form2">
+                <h2 class="form__title">Sign In</h2>
+                <a href="#" class="link">Forgot your password?</a>
+                <button class="btn">Sign In</button>
+            </form>
+        </div>
+    
+    
+        <div class="container__overlay">
+            <div class="overlay">
+                <div class="overlay__panel overlay--left">
+                    <h2><%= user %></h2>
+                    <input type="email" placeholder="Email" class="input" />
+                    <input type="password" placeholder="Password" class="input" />
+                    <button class="btn" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay__panel overlay--right">
+                    <h2>Find help. Find Work.</h2>
+                    <button class="btn" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <br><br>
+    <hr>
+    <div class='booking-form'>
+        <h2 id="book">Book Unloading, Loading and Packing Helpers</h2>
+    <form action="/Client" method="POST">
+    <input type="text" name="fullName" id="fullName" class="gui-input" required="" placeholder="Full name">
+    <input type="text" name="email" id="email" class="gui-input" required="" placeholder="Enter email">
+    <input type="text" name="phoneNum" id="phoneNum" class="gui-input" required="" placeholder="Phone number">
+    <input type="text" name="Address" placeholder="Address" id='address' required>
+    <input type="text" id="numOfMov" name="numOfMov" class="gui-input" required="" placeholder="Number Movers or Packers">
+    <input type="text" id="moveDate" name="moveDate" class="gui-input" required="" placeholder="mm/dd/yyyy">
+    <input type="text" name="details" placeholder="Details about the job" id='details' required>
+    <button type="submit" class="button button3">Book</button>
+        </form>
+    </div>
+    
+    <footer>
+        <h2><a href="/User">TaylorLeads.com</a></h2>
+    </footer>
+    
+    </body>
+    </html>

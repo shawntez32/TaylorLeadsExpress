@@ -1,0 +1,24 @@
+<%- include("header") %>
+
+<%- include("navbar") %>
+<div class="UserGrid">
+<div class="ClientBox">
+    <h2></h2>
+    <div>
+        <h4>Profile</h4>
+        <h4>History</h4>
+        <h4>Payment Method</h4>
+        <h4>Find Work</h4>
+        <h4>Contact Us</h4>
+    </div>
+</div>
+  <div>
+<% clientHistory.forEach(function(item){ %>
+    <div class="UserHistory">
+        <h3><%= item.date %></h3>
+        <p><%= item.description %></p>
+        <h4><%= item.payout%></h4>
+    </div>
+    <% }) %>
+</div>
+</div>

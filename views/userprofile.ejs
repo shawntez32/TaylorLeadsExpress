@@ -1,0 +1,22 @@
+<%- include("header") %>
+
+<%- include("navbar") %>
+<div class="UserGrid">
+    <div class="UserBox">
+        <div><h4>Profile</h4></div>
+        <div><h4>Inbox</h4></div>
+        <div><h4>History</h4></div>
+        <div><h4>Payment Method</h4></div>
+        <div><h4>Find Work</h4></div>
+        <div><h4>Contact Us</h4></div>
+    </div>
+        
+<% jobBoardPost.forEach(function(item){ %>
+    <div class="UserHistoryGrid">
+    <div class="UserHistory">
+        <h3><%= item.date %></h3>
+        <p><%= item.companyName %></p>
+        <h5><%= item.location %></h5>
+</div>
+    <% }) %>
+</div>
