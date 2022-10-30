@@ -8,20 +8,22 @@ on:
     types: [created]
 
 jobs:
-  build:
+  build-node:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm install
       - run: npm ci
       - run: npm test
+      - run: node --version
+      - run: npm --version
+      - run: npm install
       - run: node index.js
 
   publish-npm:
-    needs: build
+    needs: build-node
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
