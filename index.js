@@ -234,6 +234,6 @@ app.get("/new1", function(req,res){
   res.redirect("google.com");
 });
 
-app.listen(5500, function() {
+app.listen(port, function() {
   console.log("Server has started Successfully!");
 });
