@@ -28,5 +28,4 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm install
-    - run: npm run build --if-exists
     - run: node index.js
